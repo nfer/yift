@@ -3,7 +3,13 @@
     <a class="header-logo">
       <div class="header-logo-loading"></div>
     </a>
-    <div class="header-boards"></div>
+    <div class="header-boards-button">
+      <a class="header-btn header-boards js-boards-menu" href="#">
+        <span class="header-btn-icon icon-lg icon-board light"></span>
+        <span class="header-btn-text">看板</span>
+      </a>
+    </div>
+
     <div class="header-user"></div>
   </div>
 </template>
@@ -62,5 +68,66 @@ export default {
   position: absolute;
   top: 6px;
   width: 18px;
+}
+
+.header-btn {
+  border-radius: 3px;
+  display: block;
+  text-decoration: none;
+  float: left;
+  position: relative;
+  height: 30px;
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
+  background: rgba(255,255,255,.3);
+  color: #f3f3f3;
+  line-height: 30px;
+  margin-right: 8px;
+  min-width: 30px;
+  padding: 0;
+  user-select: none;
+  font-weight: 700;
+}
+
+.header-boards {
+  padding-left: 26px;
+}
+
+.header-btn-icon {
+  font-size: 1pc;
+  line-height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.icon-lg {
+  height: 2pc;
+  font-size: 20px;
+  line-height: 30px;
+  width: 30px
+}
+
+.icon-lg {
+  display: inline-block;
+  font-family: trellicons;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: none;
+  color: #999
+}
+
+.icon-lg.light {
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon-board:before {
+  content: "\e908";
+}
+
+.header-btn-text {
+  padding: 0 8px;
 }
 </style>
