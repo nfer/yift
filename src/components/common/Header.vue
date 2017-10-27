@@ -1,6 +1,8 @@
 <template>
   <div class="header">
-    <a class="header-logo"></a>
+    <a class="header-logo">
+      <div class="header-logo-loading"></div>
+    </a>
     <div class="header-boards"></div>
     <div class="header-user"></div>
   </div>
@@ -49,5 +51,16 @@ export default {
   background-size: cover;
 
   opacity: .5;
+}
+
+.header-logo-loading {
+  background-image: url('./header-loading-logo.gif');
+  background-size: 18px 18px;
+  display: none;
+  height: 18px;
+  left: 2px;
+  position: absolute;
+  top: 6px;
+  width: 18px;
 }
 </style>
