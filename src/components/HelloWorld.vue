@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <yift-header></yift-header>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -21,8 +22,13 @@
 </template>
 
 <script>
+import Header from './common/Header'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    'yift-header': Header
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
