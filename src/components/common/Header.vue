@@ -10,6 +10,13 @@
       </a>
     </div>
 
+    <div class="header-search">
+      <input class="header-search-input js-search-input js-disable-on-dialog" type="text" autocomplete="off" autocorrect="off" spellcheck="false" value="">
+      <span class="header-search-icon icon-lg icon-search light js-search-icon"></span>
+      <span class="header-search-icon header-search-icon-close icon-lg icon-close light js-close-icon js-search-close hide"></span>
+      <a class="header-search-icon header-search-icon-open icon-lg icon-external-link light js-open-button js-open-search-page hide" href="#"></a>
+    </div>
+
     <div class="header-user"></div>
   </div>
 </template>
@@ -129,5 +136,61 @@ export default {
 
 .header-btn-text {
   padding: 0 8px;
+}
+
+.header-search {
+    float: left;
+    margin: 0 8px 0 0;
+    position: relative;
+    z-index: 1
+}
+
+
+input[type=text].header-search-input {
+    background-color: rgba(255,255,255,.3);
+    border-radius: 3px;
+    border: none;
+    color: rgba(255,255,255,.5);
+    float: left;
+    font-size: 13px;
+    height: 30px;
+    margin: 0;
+    min-height: 30px;
+    padding-right: 30px;
+    padding-left: 8px;
+    line-height: 19px;
+    -webkit-transition: width 150ms;
+    transition: width 150ms;
+    width: 180px;
+    z-index: 1
+}
+
+input[type=text].header-search-input::-ms-clear {
+    display: none
+}
+
+input[type=text].header-search-input:hover {
+    background-color: rgba(255,255,255,.4)
+}
+
+input[type=text].header-search-input.focus,input[type=text].header-search-input.focus:hover {
+    background-color: #fff;
+    box-shadow: none;
+    color: #4d4d4d;
+    padding-right: 54px
+}
+
+.header-search-icon {
+    cursor: pointer;
+    position: absolute;
+    font-size: 1pc;
+    right: 0;
+    top: 0;
+    -webkit-transition: background 85ms,color 85ms;
+    transition: background 85ms,color 85ms;
+    z-index: 2;
+}
+.icon-search:before {
+    content: "\e94d";
 }
 </style>
