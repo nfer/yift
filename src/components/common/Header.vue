@@ -115,7 +115,6 @@ export default {
 
 .icon-lg {
   height: 2pc;
-  font-size: 20px;
   line-height: 30px;
   width: 30px
 }
