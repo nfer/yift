@@ -34,6 +34,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@font-face {
+  font-family: trellicons;
+  src: url('./trellicons.woff') format('woff');
+}
+
 .header {
   background: #026AA7;
   overflow: hidden;
