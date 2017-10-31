@@ -17,7 +17,23 @@
       <a class="header-search-icon header-search-icon-open icon-lg icon-external-link light js-open-button js-open-search-page hide" href="#"></a>
     </div>
 
-    <div class="header-user"></div>
+    <div class="header-user">
+      <a class="header-btn js-open-add-menu" href="#" aria-label="新建看板或群组">
+        <span class="header-btn-icon icon-lg icon-add light"></span>
+      </a>
+      <a class="header-btn header-info js-open-header-info-menu" href="#" aria-label="打开信息菜单">
+        <span class="header-btn-icon icon-lg icon-information light"></span>
+      </a>
+      <a class="header-btn header-notifications js-open-header-notifications-menu" href="#" aria-label="通知">
+        <span class="header-btn-icon icon-lg icon-notification light"></span>
+      </a>
+      <a class="header-btn header-avatar js-open-header-member-menu" href="#" aria-label="打开成员菜单">
+        <span class="member">
+          <span class="member-initials" title="nferzhuang (nferzhuang)">N</span>
+          <span class="member-gold-badge" title="该成员拥有 Trello Gold。"></span>
+        </span>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -196,5 +212,66 @@ input[type=text].header-search-input.focus,input[type=text].header-search-input.
 }
 .icon-search:before {
     content: "\e94d";
+}
+
+.header-user {
+    position: absolute;
+    top: 5px;
+    right: 0
+}
+.icon-add:before {
+    content: "\e902";
+}
+.icon-information:before {
+    content: "\e930";
+}
+.icon-notification:before {
+    content: "\e93c";
+}
+
+.header-btn.header-avatar {
+    border-radius: 25em;
+}
+.header-btn.header-avatar .member, .header-btn.header-member .member {
+    margin: 0;
+    border-radius: 25em;
+}
+.member, .plugin-section-title a, .profile-image {
+    text-decoration: none;
+}
+.member, .member-avatar, .member-large {
+    border-radius: 25em;
+}
+
+.day-header, .member {
+    cursor: pointer;
+}
+
+.member {
+    background-color: #D6DADC;
+    color: #4d4d4d;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 0 4px 4px 0;
+    overflow: visible;
+    position: relative;
+    width: 30px;
+    user-select: none;
+    z-index: 0
+}
+
+.member-initials {
+    display: block;
+    font-size: 9pt;
+    font-weight: 700;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%
 }
 </style>
