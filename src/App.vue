@@ -23,7 +23,6 @@ html, body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
 }
 
 .iframe-input,button,input:not([type=file]),textarea {
